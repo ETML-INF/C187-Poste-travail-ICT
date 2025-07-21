@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Hardware"
+footer: "ETML - Module C187 - Hardware"
 ---
 
 <!-- header: "Module 187 - Partie matériel" -->

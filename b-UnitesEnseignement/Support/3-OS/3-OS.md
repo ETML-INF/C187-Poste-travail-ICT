@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Système d'exploitation"
+footer: "ETML - Module C187 - Système d'exploitation"
 ---
 
 <!-- header: "Module 187 - Système d'exploitation" -->

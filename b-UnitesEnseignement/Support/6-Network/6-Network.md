@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Configuration réseau"
+footer: "ETML - Module C187 - Configuration réseau"
 ---
 
 <!-- header: "Module 187 - Configuration réseau" -->

@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Licences"
+footer: "ETML - Module C187 - Licences"
 ---
 
 <!-- header: "Module 187 - Licences" -->

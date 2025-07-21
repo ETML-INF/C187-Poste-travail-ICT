@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Installation du système d'exploitation"
+footer: "ETML - Module C187 - Installation du système d'exploitation"
 ---
 
 <!-- header: "Module 187 - Installation du système d'exploitation" -->

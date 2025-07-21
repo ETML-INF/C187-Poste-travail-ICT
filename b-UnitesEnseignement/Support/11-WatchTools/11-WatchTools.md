@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Surveillance et outils"
+footer: "ETML - Module C187 - Surveillance et outils"
 ---
 
 <!-- header: "Module 187 - Surveillance et outils" -->

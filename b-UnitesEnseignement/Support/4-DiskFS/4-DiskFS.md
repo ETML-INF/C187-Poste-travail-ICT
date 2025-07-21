@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Disques et systèmes de fichiers"
+footer: "ETML - Module C187 - Disques et systèmes de fichiers"
 ---
 
 <!-- header: "Module 187 - Disques et systèmes de fichiers" -->

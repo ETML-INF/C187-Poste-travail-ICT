@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Organisation des dossiers"
+footer: "ETML - Module C187 - Organisation des dossiers"
 ---
 
 <!-- header: "Module 187 - Organisation des dossiers" -->

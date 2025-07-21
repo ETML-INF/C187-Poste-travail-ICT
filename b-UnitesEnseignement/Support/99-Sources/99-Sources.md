@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Sources"
+footer: "ETML - Module C187 - Sources"
 ---
 
 <!-- header: "Module 187 - Sources" -->

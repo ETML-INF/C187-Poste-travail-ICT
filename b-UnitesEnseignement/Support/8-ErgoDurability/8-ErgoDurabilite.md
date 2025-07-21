@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Ergonomie et durabilité"
+footer: "ETML - Module C187 - Ergonomie et durabilité"
 ---
 
 <!-- header: "Module 187 - Ergonomie et durabilité" -->

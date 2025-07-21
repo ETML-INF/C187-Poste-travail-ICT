@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Mettre en service un poste de travail ICT"
+footer: "ETML - Module C187 - Mettre en service un poste de travail ICT"
 ---
 
 <!-- header: "Module 187 - Mettre en service un poste de travail ICT" -->
@@ -12,7 +12,7 @@ Mettre en service un poste de travail ICT avec le système d’exploitation
 ---
 
 ## Informations sur le module
-**Numéro du module** : 187  
+**Numéro du module** : C187  
 **Titre** : Mettre en service un poste de travail ICT avec le système d’exploitation
 
 **Auteurs** :  

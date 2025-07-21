@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Boot"
+footer: "ETML - Module C187 - Boot"
 ---
 
 <!-- header: "Module 187 - Démarrage" -->

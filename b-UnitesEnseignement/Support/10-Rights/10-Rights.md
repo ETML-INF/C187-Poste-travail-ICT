@@ -2,7 +2,7 @@
 marp: true
 theme: default
 paginate: true
-footer: "ETML - Module 187 - Droits des fichiers et dossiers"
+footer: "ETML - Module C187 - Droits des fichiers et dossiers"
 ---
 
 <!-- header: "Module 187 - Droits des fichiers et dossiers" -->

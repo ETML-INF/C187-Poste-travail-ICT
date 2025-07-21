@@ -96,8 +96,8 @@ jobs:
 
             # HTML
             marp "$file" --html --allow-local-files --output "public/${outputname}.html" || { echo "❌ Failed to convert $file to HTML"; exit 1; }
-            # PDF
-            marp "$file" --pdf  --allow-local-files --output "public/${outputname}.pdf"  || { echo "❌ Failed to convert $file to PDF"; exit 1; }
+            # PDF (ajout de --puppeteer-args pour les images)
+            marp "$file" --pdf --allow-local-files --puppeteer-args="--no-sandbox" --output "public/${outputname}.pdf"  || { echo "❌ Failed to convert $file to PDF"; exit 1; }
 
             # Ajout dans l'index
             cat >> public/index.html <<HTML
