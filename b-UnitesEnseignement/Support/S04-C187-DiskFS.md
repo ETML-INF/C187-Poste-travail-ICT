@@ -104,7 +104,7 @@ Il existe plus de 100 systèmes de fichiers (FS). Chaque FS définit sa façon d
 
 ---
 
-![height:500px](./img/Capt-FS-Win-App-Lin.PNG)
+![height:500px](./img/Capt-FS-Win-App-Lin.png)
 
 ---
 
