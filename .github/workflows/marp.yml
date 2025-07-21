@@ -77,7 +77,9 @@ jobs:
           # ---------- Conversion de tous les .md récursivement ----------
           echo "🚀 Conversion des fichiers Markdown..."
           readarray -d '' files < <(find b-UnitesEnseignement/Support -type f -name "*.md" -print0)
-          for file in "${files[@]}"; do
+          # Tri numérique des fichiers pour l'index (de 0 à 99)
+          sorted_files=($(printf '%s\0' "${files[@]}" | sort -z -V | xargs -0 -n1))
+          for file in "${sorted_files[@]}"; do
             filename=$(basename "$file" .md)
             dirname=$(basename "$(dirname "$file")")
             outputname="${dirname}_${filename}"
