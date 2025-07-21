@@ -24,7 +24,7 @@ Ce chapitre traite des outils disponibles pour surveiller le système et aider �
 
 Permet de verrouiller/déconnecter la session, changer d'utilisateur, modifier le mot de passe, accéder au gestionnaire de tâches, arrêter l'ordinateur.
 
-![height:500px](Capt-crt-alt-del.PNG)
+![height:500px](./img/Capt-crt-alt-del.PNG)
 
 ---
 
@@ -42,7 +42,7 @@ Onglets :
 - Services
 ---
 
-![height:500px](Capt-gest-taches.PNG)
+![height:500px](./img/Capt-gest-taches.PNG)
 
 ---
 
@@ -59,7 +59,7 @@ Onglets :
 
 ---
 
-![bg fit](Capt-conf-sys.PNG)
+![bg fit](./img/Capt-conf-sys.PNG)
 
 ---
 
@@ -71,11 +71,11 @@ Options dans l'onglet Démarrer :
 
 ---
 
-![height:500px](Capt-msconfig-demarrer.PNG)
+![height:500px](./img/Capt-msconfig-demarrer.PNG)
 
 ---
 
-![height:500px](Capt-mode-sans-echec.PNG)
+![height:500px](./img/Capt-mode-sans-echec.PNG)
 
 ---
 
@@ -83,7 +83,7 @@ Options dans l'onglet Démarrer :
 
 Beaucoup d'outils accessibles via clic droit sur le logo Windows.
 
-![height:500px](Capt-logo-dr.PNG)
+![height:500px](./img/Capt-logo-dr.PNG)
 
 ---
 
@@ -91,7 +91,7 @@ Beaucoup d'outils accessibles via clic droit sur le logo Windows.
 
 Outils d'administration disponibles dans Windows.
 
-![height:500px](Capt-outils-admin.PNG)
+![height:500px](./img/Capt-outils-admin.PNG)
 
 ---
 
@@ -99,7 +99,7 @@ Outils d'administration disponibles dans Windows.
 
 Modification, ajout, suppression de partitions.
 
-![height:500px](Capt-gest-disques.PNG)
+![height:500px](./img/Capt-gest-disques.PNG)
 
 ---
 
@@ -107,7 +107,7 @@ Modification, ajout, suppression de partitions.
 
 Voir le matériel installé et les erreurs éventuelles.
 
-![height:500px](Capt-gest-peri.PNG)
+![height:500px](./img/Capt-gest-peri.PNG)
 
 ---
 
@@ -115,7 +115,7 @@ Voir le matériel installé et les erreurs éventuelles.
 
 Voir l'état des connexions réseau.
 
-![height:500px](Capt-infos-reseau.PNG)
+![height:500px](./img/Capt-infos-reseau.PNG)
 
 ---
 
@@ -123,7 +123,7 @@ Voir l'état des connexions réseau.
 
 Journaux : Application, Sécurité, Système
 
-![height:500px](Capt-obs-even.PNG)
+![height:500px](./img/Capt-obs-even.PNG)
 
 ---
 
@@ -137,7 +137,7 @@ Déjà vu dans le chapitre Ergonomie et durabilité.
 
 Voir, modifier, supprimer les applications installées.
 
-![height:500px](Capt-appli-suppr.PNG)
+![height:500px](./img/Capt-appli-suppr.PNG)
 
 ---
 
@@ -155,7 +155,7 @@ Outils :
 
 ---
 
-![height:500px](Capt-gestion-ordi.PNG)
+![height:500px](./img/Capt-gestion-ordi.PNG)
 
 ---
 
@@ -169,7 +169,7 @@ Accès par la commande regedit (Éditeur de registres). Demande les droits d'adm
 
 Informations sur le nom de l'ordinateur, workgroup/domaine, processeur, RAM, version OS.
 
-![height:500px](Capt-systeme-win.PNG)
+![height:500px](./img/Capt-systeme-win.PNG)
 
 ---
 
@@ -177,7 +177,7 @@ Informations sur le nom de l'ordinateur, workgroup/domaine, processeur, RAM, ver
 
 Exporter un fichier texte avec toutes les infos système.
 
-![height:500px](Capt-infos-sys.PNG)
+![height:500px](./img/Capt-infos-sys.PNG)
 
 ---
 
@@ -185,11 +185,11 @@ Exporter un fichier texte avec toutes les infos système.
 
 Le panneau de configuration regroupe plusieurs fonctionnalités essentielles.
 
-![height:500px](Capt-panneau-config.PNG)
+![height:500px](./img/Capt-panneau-config.PNG)
 
 ---
 
-![height:500px](Capt-parametres-windows.PNG)
+![height:500px](./img/Capt-parametres-windows.PNG)
 
 ---
 
@@ -206,7 +206,7 @@ Accès : Maj + redémarrage
 - Dépannage
 - Éteindre
 
-![height:300px](Capt-ecran-demarrage1.PNG)
+![height:300px](./img/Capt-ecran-demarrage1.PNG)
 
 ---
 
@@ -214,17 +214,17 @@ Accès : Maj + redémarrage
 
 Choix de réinitialiser le PC, conserver ou non les fichiers personnels.
 
-![height:500px](Capt-ecran-demarrage2.PNG)
+![height:500px](./img/Capt-ecran-demarrage2.PNG)
 
 ---
 
-![height:500px](Capt-ecran-demarrage3.PNG)
+![height:500px](./img/Capt-ecran-demarrage3.PNG)
 
 ---
 
 Options avancées : redémarrage, restauration, vérification.
 
-![height:500px](Capt-ecran-demarrage4.PNG)
+![height:500px](./img/Capt-ecran-demarrage4.PNG)
 
 ---
 
@@ -232,4 +232,4 @@ Options avancées : redémarrage, restauration, vérification.
 
 Onglet Outils : vérifier et optimiser le lecteur.
 
-![height:500px](Capt-disque-proprietes-outils.PNG)
+![height:500px](./img/Capt-disque-proprietes-outils.PNG)
