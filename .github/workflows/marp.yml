@@ -3,12 +3,15 @@ name: Build and Deploy All MARP Presentations
 on:
   push:
     paths:
-      - 'b-UnitesEnseignement/Support/*.md'  
-      - 'b-UnitesEnseignement/Support/img/**'  
-      - 'b-UnitesEnseignement/Exercices/*.pdf'  
+      # Présentations : tous les .md, y compris dans les sous‑dossiers
+      - 'b-UnitesEnseignement/Support/**/*.md'
+      # Ressources images
+      - 'b-UnitesEnseignement/Support/img/**'
+      # Exercices PDF
+      - 'b-UnitesEnseignement/Exercices/*.pdf'
   pull_request:
     paths:
-      - 'b-UnitesEnseignement/Support/*.md'
+      - 'b-UnitesEnseignement/Support/**/*.md'
       - 'b-UnitesEnseignement/Support/img/**'
       - 'b-UnitesEnseignement/Exercices/*.pdf'
 
@@ -22,23 +25,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Récupération du dépôt
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 2. Installation de MARP CLI et de Puppeteer (nécessaire pour la génération PDF)
       - name: Install Node.js and MARP CLI
         run: |
           npm install -g @marp-team/marp-cli
           npm install puppeteer
 
+      # 3. Génération des présentations + copie des ressources
       - name: Generate Presentations (HTML + PDF) and Copy Resources
         run: |
-          echo "✅ Création des dossiers..."
+          set -e
+
+          echo "✅ Création des dossiers de sortie..."
           mkdir -p public/img
           mkdir -p public/exercices
 
-          echo "🔍 Vérification des fichiers avant la copie..."
-          ls -l b-UnitesEnseignement/Support/img/ || echo "📂 Aucune image trouvée"
-          ls -l b-UnitesEnseignement/Exercices/ || echo "📂 Aucun exercice trouvé"
+          echo "🔍 Vérification des images et exercices..."
+          ls -l b-UnitesEnseignement/Support/img/       || echo "📂 Aucune image trouvée"
+          ls -l b-UnitesEnseignement/Exercices/         || echo "📂 Aucun exercice trouvé"
 
           echo "📂 Copie des images..."
           cp -r b-UnitesEnseignement/Support/img/* public/img/ 2>/dev/null || echo "⚠️ Aucune image copiée"
@@ -46,55 +54,79 @@ jobs:
           echo "📂 Copie des exercices PDF..."
           cp b-UnitesEnseignement/Exercices/*.pdf public/exercices/ 2>/dev/null || echo "⚠️ Aucun exercice PDF copié"
 
-          echo "✅ Contenu final de public/"
-          ls -l public/
-          ls -l public/exercices/
+          echo "✅ Contenu actuel du dossier public/"
+          ls -l public/ || true
+          ls -l public/exercices/ || true
 
-          echo "<!DOCTYPE html>
-          <html lang='fr'>
-          <head>
-            <meta charset='UTF-8'>
-            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-            <title>Liste des Présentations</title>
-            <script src='https://cdn.tailwindcss.com'></script>
-          </head>
-          <body class='bg-gray-900 text-white font-sans p-6'>
-            <div class='max-w-4xl mx-auto'>
-              <h1 class='text-3xl font-bold mb-4 text-center'>Liste des Présentations</h1>
-              <ul class='space-y-3'>" > public/index.html
+          # ---------- Génération de l'index HTML ----------
+          cat > public/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="fr">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>Liste des Présentations</title>
+              <script src="https://cdn.tailwindcss.com"></script>
+            </head>
+            <body class="bg-gray-900 text-white font-sans p-6">
+              <div class="max-w-4xl mx-auto">
+                <h1 class="text-3xl font-bold mb-4 text-center">Liste des Présentations</h1>
+                <ul class="space-y-3">
+          HTML
 
-          for file in b-UnitesEnseignement/Support/*.md; do
-            filename=$(basename "$file" .md)
+          # ---------- Conversion de tous les .md récursivement ----------
+          echo "🚀 Conversion des fichiers Markdown..."
+          find b-UnitesEnseignement/Support -type f -name "*.md" | while read -r file; do
+            filename=$(basename "$file" .md)                # ex. Intro
+            dirname=$(basename "$(dirname "$file")")        # ex. 1-Hardware
+            outputname="${dirname}_${filename}"             # ex. 1-Hardware_Intro
 
-            marp "$file" --html --allow-local-files --output "public/${filename}.html"
-            marp "$file" --pdf --allow-local-files --output "public/${filename}.pdf"
+            echo "  • $file  →  ${outputname}.(html|pdf)"
 
-            echo "<li class='bg-gray-800 p-4 rounded-lg'>
-                    <a href='${filename}.html' class='text-blue-400 hover:underline font-bold'>📄 ${filename} (HTML)</a> |
-                    <a href='${filename}.pdf' class='text-green-400 hover:underline font-bold'>📕 ${filename} (PDF)</a>
-                  </li>" >> public/index.html
+            # HTML
+            marp "$file" --html --allow-local-files --output "public/${outputname}.html"
+            # PDF
+            marp "$file" --pdf  --allow-local-files --output "public/${outputname}.pdf"
+
+            # Ajout dans l'index
+            cat >> public/index.html <<HTML
+                  <li class="bg-gray-800 p-4 rounded-lg">
+                    <a href="${outputname}.html" class="text-blue-400 hover:underline font-bold">📄 ${outputname} (HTML)</a> |
+                    <a href="${outputname}.pdf"  class="text-green-400 hover:underline font-bold">📕 ${outputname} (PDF)</a>
+                  </li>
+          HTML
           done
 
-          echo "</ul>" >> public/index.html
+          # ---------- Section Exercices ----------
+          cat >> public/index.html <<'HTML'
+                </ul>
 
-          # Ajout de la section "Liste des Exercices"
-          echo "<h2 class='text-2xl font-bold mt-8 text-center'>Liste des Exercices</h2>
-                <ul class='space-y-3'>" >> public/index.html
+                <h2 class="text-2xl font-bold mt-8 text-center">Liste des Exercices</h2>
+                <ul class="space-y-3">
+          HTML
 
           for file in public/exercices/*.pdf; do
-            filename=$(basename "$file")
-
-            echo "<li class='bg-gray-800 p-4 rounded-lg'>
-                    <a href='exercices/${filename}' class='text-yellow-400 hover:underline font-bold'>📘 ${filename} (PDF)</a>
-                  </li>" >> public/index.html
+            [ -e "$file" ] || continue
+            pdffile=$(basename "$file")
+            cat >> public/index.html <<HTML
+                  <li class="bg-gray-800 p-4 rounded-lg">
+                    <a href="exercices/${pdffile}" class="text-yellow-400 hover:underline font-bold">📘 ${pdffile} (PDF)</a>
+                  </li>
+          HTML
           done
 
-          echo "</ul>
-                <p class='mt-6 text-center text-sm text-gray-400'>Généré automatiquement avec MARP et TailwindCSS</p>
-                </div>
-              </body>
-            </html>" >> public/index.html
+          # ---------- Fin de l'index ----------
+          cat >> public/index.html <<'HTML'
+                </ul>
+                <p class="mt-6 text-center text-sm text-gray-400">
+                  Généré automatiquement avec MARP CLI et TailwindCSS
+                </p>
+              </div>
+            </body>
+          </html>
+          HTML
 
+      # 4. Téléversement de l'artifact pour Pages
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
         with:
