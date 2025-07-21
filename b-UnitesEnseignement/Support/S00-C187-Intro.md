@@ -68,5 +68,3 @@ Mettre en service un poste de travail ICT : vérifier des aspects importants de 
 - 10-Rights
 - 11-WatchTools
 - Sources
-
----
