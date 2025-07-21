@@ -20,7 +20,7 @@ L'OS est toujours installé sur le disque **C:**. L'arborescence contient les do
 
 La taille minimale de la partition C: doit être de 64GB selon Microsoft.
 
-![height:350px](Capt-disk-sys-win11.PNG)
+![height:350px](./img/Capt-disk-sys-win11.PNG)
 
 ---
 
@@ -46,7 +46,7 @@ Un **point de montage** définit le point d'accès pour le contenu d'une partiti
 
 Dans Windows, les points de montage sont définis par des lettres visibles dans l'Explorateur de fichiers. On utilise le gestionnaire de disques pour les modifier.
 
-![height:200px](Capt-disk-Windows.PNG)
+![height:200px](./img/Capt-disk-Windows.PNG)
 
 ---
 
@@ -62,7 +62,7 @@ Dans Windows, les points de montage sont définis par des lettres visibles dans 
 
 Dans Linux, la racine est définie par `/`. Si le point de montage de la racine est supprimé, le système ne fonctionne plus.
 
-![height:400px](Capt-disk-linux-racine.PNG)
+![height:400px](./img/Capt-disk-linux-racine.PNG)
 
 ---
 
@@ -84,7 +84,7 @@ Dans le mode graphique de Linux, des icônes définissent la racine et le home d
 - Système de fichiers = `/`
 - Répertoire personnel = `/home`
 
-![height:300px](Capt-disk-linux.PNG)
+![height:300px](./img/Capt-disk-linux.PNG)
 
 ---
 
@@ -92,23 +92,23 @@ Dans le mode graphique de Linux, des icônes définissent la racine et le home d
 
 - Disque dur
 
-![height:400px](Capt-disk-mac-hd.png)
+![height:400px](./img/Capt-disk-mac-hd.png)
 
 ---
 
 - Disque externe
 
-![height:400px](Capt-disk-mac-ext.png)
+![height:400px](./img/Capt-disk-mac-ext.png)
 
 ---
 
 ## Gestionnaire de disques : Windows vs GParted
 
-![height:500px](Capt-gest-disks-Win.PNG)
+![height:500px](./img/Capt-gest-disks-Win.PNG)
 
 ---
 
-![height:500px](Capt-GParted.PNG)
+![height:500px](./img/Capt-GParted.PNG)
 
 ---
 

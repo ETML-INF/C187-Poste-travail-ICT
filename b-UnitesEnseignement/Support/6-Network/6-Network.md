@@ -42,7 +42,7 @@ Configuration dans les paramètres de la carte réseau :
 
 Pour une IP fixe, on saisit l'adresse IP, le masque, la passerelle et le DNS dans les paramètres de la carte réseau du PC.
 
-![height:500px](Capt-IP-FIXE.PNG)
+![height:500px](./img/Capt-IP-FIXE.PNG)
 
 ---
 
@@ -51,7 +51,7 @@ Pour une IP fixe, on saisit l'adresse IP, le masque, la passerelle et le DNS dan
 Pour DHCP, on définit dans les paramètres réseau l'utilisation du DHCP.
 **DHCP** (Dynamic Host Configuration Protocol) : serveur qui distribue des adresses IP.
 
-![height:500px](Capt-IP-DHCP.PNG)
+![height:500px](./img/Capt-IP-DHCP.PNG)
 
 ---
 
@@ -82,7 +82,7 @@ La meilleure protection reste la vigilance et la prudence !
 
 ---
 
-![height:500px](Capt-secu-Windows.PNG)
+![height:500px](./img/Capt-secu-Windows.PNG)
 
 ---
 

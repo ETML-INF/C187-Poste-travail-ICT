@@ -30,7 +30,7 @@ Son rôle :
 
 On peut représenter des couches pour l'interaction :
 
-![height:500px](Capt-schema-OS.PNG)
+![height:500px](./img/Capt-schema-OS.PNG)
 
 ---
 
@@ -85,7 +85,7 @@ On parle d'**espace noyau** et d'**espace utilisateur** :
 
 ---
 
-![bg fit](Capt-noyau-esp-user.PNG)
+![bg fit](./img/Capt-noyau-esp-user.PNG)
 
 ---
 
@@ -101,7 +101,7 @@ Depuis Windows NT, toutes les infos sur l'OS, le matériel, les applications et 
 
 On y accède avec **regedit**. Organisé comme un arbre avec 5 clés principales (hives), des sous-clés et des valeurs.
 
-![height:200px](Capt-registry-keys.PNG)
+![height:200px](./img/Capt-registry-keys.PNG)
 
 À manier avec précaution, pas de sécurité si on modifie ou supprime une clé ou valeur.
 
@@ -119,7 +119,7 @@ Un script regroupe des commandes du shell dans un fichier.
 
 ---
 
-![bg fit](Capt-tab-commandes.PNG)
+![bg fit](./img/Capt-tab-commandes.PNG)
 
 ---
 
@@ -160,7 +160,7 @@ Dans le **gestionnaire de périphériques** se trouve tout le matériel du syst�
 
 ---
 
-![bg fit](Capt-gest-peri.PNG)
+![bg fit](./img/Capt-gest-peri.PNG)
 
 ---
 
@@ -168,7 +168,7 @@ Dans le **gestionnaire de périphériques** se trouve tout le matériel du syst�
 
 Première ligne : périphérique ne fonctionnant pas correctement.
 
-![height:200px](Capt-gest-peri-erreur.PNG)
+![height:200px](./img/Capt-gest-peri-erreur.PNG)
 
 ---
 
@@ -176,7 +176,7 @@ Première ligne : périphérique ne fonctionnant pas correctement.
 
 Onglet général : état du pilote
 
-![height:500px](Capt-peri-carte-graph-gen.PNG)
+![height:500px](./img/Capt-peri-carte-graph-gen.PNG)
 
 ---
 ## Pilote de carte graphique
@@ -184,14 +184,14 @@ Onglet général : état du pilote
 
 Onglet pilote : version, mise à jour, suppression, désactivation
 
-![height:500px](Capt-peri-carte-graph-pilote.PNG)
+![height:500px](./img/Capt-peri-carte-graph-pilote.PNG)
 
 ---
 ## Pilote de carte graphique
 
 Mise à jour : bouton "Mettre à jour le pilote"
 
-![height:500px](Capt-peri-pilote-maj.PNG)
+![height:500px](./img/Capt-peri-pilote-maj.PNG)
 
 ---
 

@@ -22,7 +22,7 @@ La gestion des droits se fait dans les *Propriétés*, onglet *Sécurité* :
 - Partie supérieure : groupes/personnes
 - Partie inférieure : droits associés
 
-![bg right](Capt-droits-propriete-secu.PNG)
+![bg right](./img/Capt-droits-propriete-secu.PNG)
 
 ---
 
@@ -47,13 +47,13 @@ La gestion des droits se fait dans les *Propriétés*, onglet *Sécurité* :
 
 ## Droits sur les dossiers
 
-![height:500px](Capt-droits-NTFS-dossiers.PNG)
+![height:500px](./img/Capt-droits-NTFS-dossiers.PNG)
 
 ---
 
 ## Droits sur les fichiers
 
-![height:500px](Capt-droits-NTFS-fichiers.PNG)
+![height:500px](./img/Capt-droits-NTFS-fichiers.PNG)
 
 ---
 
@@ -63,7 +63,7 @@ Dans l'onglet *Sécurité* > bouton *Modifier* :
 - Partie supérieure : groupes/utilisateurs
 - Partie inférieure : autorisations pour la sélection
 
-![bg right](Capt-droits-propriete-modifier.PNG)
+![bg right](./img/Capt-droits-propriete-modifier.PNG)
 
 ---
 
@@ -74,7 +74,7 @@ Dans l'onglet *Sécurité* > bouton *Avancé* :
 - Audit
 - Accès effectif
 
-![height:500px](Capt-droits-propriete-avance.PNG)
+![height:500px](./img/Capt-droits-propriete-avance.PNG)
 
 ---
 
@@ -85,7 +85,7 @@ Dans l'onglet *Sécurité* > bouton *Avancé* :
 - **ACE** (Access Control Entry) : entrée contenant SID et droits
 - Un dossier parent a une ACL, les enfants héritent des droits
 
-![height:300px](Capt-droitsNTFS-listeACL.PNG)
+![height:300px](./img/Capt-droitsNTFS-listeACL.PNG)
 
 ---
 
@@ -97,11 +97,11 @@ Dans l'onglet *Sécurité* > bouton *Avancé* :
 
 ---
 
-![bg fit](Capt-droitsNTFS-autorisationRefuser.PNG)
+![bg fit](./img/Capt-droitsNTFS-autorisationRefuser.PNG)
 
 ---
 
-![bg fit](Capt-heritage-autorisation.PNG)
+![bg fit](./img/Capt-heritage-autorisation.PNG)
 
 ---
 
@@ -113,7 +113,7 @@ Dans l'onglet *Sécurité* > bouton *Avancé* :
 [NTFS-malekal](https://www.malekal.com/les-autorisations-et-la-gestion-de-fichiers-et-partagessous-windows-avec-le-systeme-de-fichiers-ntfs-2/)
 
 ---
-![bg fit](Capt-droits-copy-move.PNG)
+![bg fit](./img/Capt-droits-copy-move.PNG)
 
 ---
 
@@ -129,7 +129,7 @@ Dans l'onglet *Sécurité* > bouton *Avancé* :
 Pour voir les droits d'un fichier :
 - `ls -l` dans le répertoire
 
-![height:200px](Capt-droits-linux-ls-l.PNG)
+![height:200px](./img/Capt-droits-linux-ls-l.PNG)
 
 ---
 
@@ -166,7 +166,7 @@ Remarques :
 - Syntaxe : chmod mode [-R] fichier
 - Mode : symbolique ou octal
 
-![height:200px](Capt-droits-linux-chmod.PNG)
+![height:200px](./img/Capt-droits-linux-chmod.PNG)
 
 Exemples :
 - chmod 754 fichier <=> chmod a=r,ug+x,u+w fichier

@@ -22,7 +22,7 @@ Plusieurs étapes vont se succéder, selon sur le slide suivant :
 
 ---
 
-![bg fit](Capt-seq-dem-pc.PNG)
+![bg fit](./img/Capt-seq-dem-pc.PNG)
 
 ---
 
@@ -87,7 +87,7 @@ C'est l'évolution du BIOS, pour les raisons décrites ci-dessus. Il est possibl
 
 ---
 
-![bg fit](Capt-uefi-main.PNG)
+![bg fit](./img/Capt-uefi-main.PNG)
 
 ---
 
@@ -110,7 +110,7 @@ Pour accéder au BIOS/UEFI (ou Setup), on presse au démarrage sur une touche (s
 
 En résumé pour le MBR-GPT :
 
-![height:400px](Capt-resume-mbr-gpt.PNG)
+![height:400px](./img/Capt-resume-mbr-gpt.PNG)
 
 ---
 

@@ -55,7 +55,7 @@ Le MBR (zone d'amorçage) est le premier secteur adressable du disque dur.
 
 ---
 
-![height:500px](Capt-PART-BIOS.PNG)
+![height:500px](./img/Capt-PART-BIOS.PNG)
 
 ---
 
@@ -72,13 +72,13 @@ Le GPT contient les informations pour les partitions du disque.
 
 ---
 
-![height:500px](Capt-GPT-STRUC.PNG)
+![height:500px](./img/Capt-GPT-STRUC.PNG)
 
 ---
 
 ## Exemple de partition GPT sous Windows
 
-![height:500px](Capt-PART-UEFI.PNG)
+![height:500px](./img/Capt-PART-UEFI.PNG)
 
 ---
 
@@ -104,7 +104,7 @@ Il existe plus de 100 systèmes de fichiers (FS). Chaque FS définit sa façon d
 
 ---
 
-![height:500px](Capt-FS-Win-App-Lin.PNG)
+![height:500px](./img/Capt-FS-Win-App-Lin.PNG)
 
 ---
 
@@ -118,7 +118,7 @@ Attention : l'information peut être définitivement perdue. **Ne pas toucher au
 
 ## Windows : gestionnaire de disques
 
-![height:500px](Capt-gest-disques-Windows.PNG)
+![height:500px](./img/Capt-gest-disques-Windows.PNG)
 
 ---
 
@@ -137,13 +137,13 @@ GParted (Gnome PARTition EDitor) : logiciel gratuit pour la gestion graphique de
 
 ## Exemple GParted : Windows
 
-![height:500px](Capt-gparted-uuid-W10.PNG)
+![height:500px](./img/Capt-gparted-uuid-W10.PNG)
 
 ---
 
 ## Exemple GParted : Linux
 
-![height:500px](Capt-gparted-uuid-linux.PNG)
+![height:500px](./img/Capt-gparted-uuid-linux.PNG)
 
 ---
 
@@ -157,4 +157,4 @@ Quand on touche au système :
 
 ---
 
-![bg fit](Capt-tab-byte.PNG)
+![bg fit](./img/Capt-tab-byte.PNG)

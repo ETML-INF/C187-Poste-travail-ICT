@@ -27,8 +27,8 @@ Dans notre cas, l'ergonomie est la façon d'organiser correctement et confortabl
 
 Les documents ci-dessous donnent toutes les informations importantes pour le bien-être concernant le travail sur écran et l'ergonomie de la place de travail :
 
-- [Place de travail (PDF)](SUVA-place-de-travail.pdf)
-- [Travail sur écran (PDF)](SUVA-travail-sur-ecran.pdf)
+- [Place de travail (PDF)](./img/SUVA-place-de-travail.pdf)
+- [Travail sur écran (PDF)](./img/SUVA-travail-sur-ecran.pdf)
 - [Site de la SUVA](https://www.suva.ch/)
 
 ---
@@ -55,11 +55,11 @@ Il existe des différences selon les machines. On peut aussi définir des mots d
 
 ---
 
-![bg fit](Capt-ene-pwd-1.PNG)
+![bg fit](./img/Capt-ene-pwd-1.PNG)
 
 ---
 
-![bg fit](Capt-ene-pwd-2.PNG)
+![bg fit](./img/Capt-ene-pwd-2.PNG)
 
 ---
 
@@ -67,7 +67,7 @@ Il existe des différences selon les machines. On peut aussi définir des mots d
 
 On peut également créer son mode personnalisé.
 
-![height:350px](Capt-ene-mode-perso.PNG)
+![height:350px](./img/Capt-ene-mode-perso.PNG)
 
 Pour un PC portable, les choix sont identiques avec en plus, les options pour la batterie.
 
@@ -79,8 +79,8 @@ L'écologie et le développement durable sont des sujets d'actualité. À l'éco
 
 Il a regroupé dans deux documents des recommandations pour sensibiliser à la durabilité concernant les ordinateurs :
 
-- [Recommandation pour l'achat du matériel informatique (PDF)](RecommandationAchatMaterielInformatique.pdf)
-- [Recommandation pour l'utilisation du matériel informatique (PDF)](RecommandationUtilisationMaterielleInformatique.pdf)
+- [Recommandation pour l'achat du matériel informatique (PDF)](./img/RecommandationAchatMaterielInformatique.pdf)
+- [Recommandation pour l'utilisation du matériel informatique (PDF)](./img/RecommandationUtilisationMaterielleInformatique.pdf)
 
 ---
 
@@ -88,5 +88,5 @@ Il a regroupé dans deux documents des recommandations pour sensibiliser à la d
 
 Le GIDDE a également produit des documents pour Android et iOS :
 
-- [Recommandation Consommation Energie Android (PDF)](RecommandationConsommationEnergieAndroid.pdf)
-- [Recommandation Consommation Energie IOS (PDF)](RecommandationConsommationEnergieIOS.pdf)
+- [Recommandation Consommation Energie Android (PDF)](./img/RecommandationConsommationEnergieAndroid.pdf)
+- [Recommandation Consommation Energie IOS (PDF)](./img/RecommandationConsommationEnergieIOS.pdf)

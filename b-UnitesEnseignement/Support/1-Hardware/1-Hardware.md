@@ -42,7 +42,7 @@ Un ordinateur est composé de divers éléments :
 
 Une version très basique d'un ordinateur est le Raspberry Pi4, sans boîtier et qui coûte moins de 100CHF.
 
-![scale:50%](Capt-raspberrypi.PNG)
+![scale:50%](./img/Capt-raspberrypi.PNG)
 
 ---
 
@@ -66,7 +66,7 @@ Aux États-Unis et au Canada, la tension est de 120 V/60 Hz, alors qu’en Europ
 
 ---
 
-![bg fit](Capt-schema-alim.PNG)
+![bg fit](./img/Capt-schema-alim.PNG)
 
 ---
 
@@ -103,11 +103,11 @@ Avec le nom du constructeur et de la carte mère, il est possible de trouver les
 
 ---
 
-![bg fit](Capt-cartemere.PNG)
+![bg fit](./img/Capt-cartemere.PNG)
 
 ---
 
-![bg fit](Capt-cartemere-ASRock.PNG)
+![bg fit](./img/Capt-cartemere-ASRock.PNG)
 
 ---
 
@@ -160,9 +160,9 @@ C'est un circuit imprimé avec :
 - emplacements (slots) pour mémoire/cartes
 - socket pour le processeur
 
-![scale:100%](Capt-formats-cartemere.PNG)
+![scale:100%](./img/Capt-formats-cartemere.PNG)
 
-![scale:75%](Capt-formats-cartemere-2.PNG)
+![scale:75%](./img/Capt-formats-cartemere-2.PNG)
 
 ---
 
@@ -179,7 +179,7 @@ C'est un circuit imprimé avec :
 
 ---
 
-![bg fit](Capt-schema-chipset.PNG)
+![bg fit](./img/Capt-schema-chipset.PNG)
 
 ---
 
@@ -213,7 +213,7 @@ Le processeur est composé de :
 - ALU (Unité de calcul Arithmétique et Logique)
 - processeur graphique intégré
 
-![scale:50%](Capt-type-proc.PNG)
+![scale:50%](./img/Capt-type-proc.PNG)
 
 ---
 
