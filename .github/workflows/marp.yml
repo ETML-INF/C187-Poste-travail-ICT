@@ -82,7 +82,12 @@ jobs:
           for file in "${sorted_files[@]}"; do
             filename=$(basename "$file" .md)
             dirname=$(basename "$(dirname "$file")")
-            outputname="${dirname}_${filename}"
+            # Si le nom du dossier et du fichier sont identiques, n'affiche qu'une fois
+            if [ "$dirname" = "$filename" ]; then
+              outputname="$filename"
+            else
+              outputname="${dirname}_${filename}"
+            fi
 
             echo "  • $file  →  ${outputname}.(html|pdf)"
 
