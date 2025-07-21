@@ -51,6 +51,9 @@ jobs:
           echo "📂 Copie des images..."
           cp -r b-UnitesEnseignement/Support/img/* public/img/ 2>/dev/null || echo "⚠️ Aucune image copiée"
 
+          # Copie récursive de toutes les images des sous-dossiers de Support vers public/ en gardant la structure
+          rsync -av --include='*/' --include='*.png' --include='*.jpg' --include='*.jpeg' --include='*.gif' --exclude='*' b-UnitesEnseignement/Support/ public/
+
           echo "📂 Copie des exercices PDF..."
           cp b-UnitesEnseignement/Exercices/*.pdf public/exercices/ 2>/dev/null || echo "⚠️ Aucun exercice PDF copié"
 

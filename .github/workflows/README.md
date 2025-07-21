@@ -9,7 +9,7 @@ Ce workflow :
 - **Déclenche automatiquement la génération et le déploiement des fichiers** lorsqu’un fichier Markdown (`.md`) ou un fichier d'exercice (`.pdf`) est ajouté ou modifié.
 - **Génère des fichiers HTML et PDF avec MARP** pour les présentations.
 - **Copie les fichiers d'exercices PDF** dans un dossier dédié (`public/exercices/`).
-- **Crée une page `index.html`** listant automatiquement toutes les présentations et exercices disponibles.
+- **Crée une page `index.html`** listant automatiquement toutes les présentations et exercices disponibles, triées de 0 à 99 et sans doublon de nom.
 - **Déploie les fichiers générés sur GitHub Pages**.
 
 ---
@@ -30,12 +30,12 @@ Le workflow s’exécute **automatiquement** lorsque :
 on:
   push:
     paths:
-      - 'b-UnitesEnseignement/Support/*.md'  
+      - 'b-UnitesEnseignement/Support/**/*.md'  
       - 'b-UnitesEnseignement/Support/img/**'  
       - 'b-UnitesEnseignement/Exercices/*.pdf'  
   pull_request:
     paths:
-      - 'b-UnitesEnseignement/Support/*.md'
+      - 'b-UnitesEnseignement/Support/**/*.md'
       - 'b-UnitesEnseignement/Support/img/**'
       - 'b-UnitesEnseignement/Exercices/*.pdf'
 ```
@@ -68,22 +68,34 @@ permissions:
 ---
 
 ### 🔹 4. **Création et génération des fichiers MARP**
-```yaml
-for file in b-UnitesEnseignement/Support/*.md; do
+```bash
+readarray -d '' files < <(find b-UnitesEnseignement/Support -type f -name "*.md" -print0)
+# Tri numérique des fichiers pour l'index (de 0 à 99)
+sorted_files=($(printf '%s\0' "${files[@]}" | sort -z -V | xargs -0 -n1))
+for file in "${sorted_files[@]}"; do
   filename=$(basename "$file" .md)
+  dirname=$(basename "$(dirname "$file")")
+  # Si le nom du dossier et du fichier sont identiques, n'affiche qu'une fois
+  if [ "$dirname" = "$filename" ]; then
+    outputname="$filename"
+  else
+    outputname="${dirname}_${filename}"
+  fi
 
-  marp "$file" --html --allow-local-files --output "public/${filename}.html"
-  marp "$file" --pdf --allow-local-files --output "public/${filename}.pdf"
+  marp "$file" --html --allow-local-files --output "public/${outputname}.html"
+  marp "$file" --pdf --allow-local-files --output "public/${outputname}.pdf"
 done
 ```
 📌 **Convertit chaque fichier `.md` en :**
 - **HTML** (`.html`) pour afficher en ligne
 - **PDF** (`.pdf`) pour impression ou partage
+- **Noms sans doublon** : si le nom du dossier et du fichier sont identiques, seul le nom du fichier est utilisé.
+- **Tri automatique** : les présentations sont listées de 0 à 99 dans l'index.
 
 ---
 
 ### 🔹 5. **Gestion des fichiers exercices**
-```yaml
+```bash
 mkdir -p public/exercices
 cp b-UnitesEnseignement/Exercices/*.pdf public/exercices/ 2>/dev/null || echo "⚠️ Aucun exercice PDF copié"
 ```
@@ -91,7 +103,13 @@ cp b-UnitesEnseignement/Exercices/*.pdf public/exercices/ 2>/dev/null || echo "�
 
 ---
 
-### 🔹 6. **Déploiement sur GitHub Pages**
+### 🔹 6. **Génération dynamique de l'index HTML**
+- Génère une page `index.html` avec TailwindCSS listant toutes les présentations (HTML/PDF) et exercices PDF.
+- Les présentations sont triées de 0 à 99 et les noms sont propres (pas de doublon).
+
+---
+
+### 🔹 7. **Déploiement sur GitHub Pages**
 ```yaml
 - name: Upload artifact for deployment
   uses: actions/upload-pages-artifact@v3
@@ -133,9 +151,9 @@ cp b-UnitesEnseignement/Exercices/*.pdf public/exercices/ 2>/dev/null || echo "�
 ## 📝 **Résumé**
 ✅ **Automatisation complète** avec MARP pour générer **HTML & PDF**  
 ✅ **Déploiement automatique** sur **GitHub Pages**  
-✅ **Indexation dynamique** des fichiers dans `index.html`  
-✅ **Maintenance facile** grâce à GitHub Actions  
+✅ **Indexation dynamique** des fichiers dans `index.html` (triés et sans doublon)  
+✅ **Maintenance facile** grâce à GitHub Actions
 
 ---
 📌 **Auteur :** AGR
-📅 **Dernière mise à jour :** 13 mars 2025
+📅 **Dernière mise à jour :** 21 juillet 2025
