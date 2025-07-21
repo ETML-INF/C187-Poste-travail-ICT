@@ -76,17 +76,17 @@ jobs:
 
           # ---------- Conversion de tous les .md récursivement ----------
           echo "🚀 Conversion des fichiers Markdown..."
-          find b-UnitesEnseignement/Support -type f -name "*.md" | while read -r file; do
-            filename=$(basename "$file" .md)                # ex. Intro
-            dirname=$(basename "$(dirname "$file")")        # ex. 1-Hardware
-            outputname="${dirname}_${filename}"             # ex. 1-Hardware_Intro
+          find b-UnitesEnseignement/Support -type f -name "*.md" | while IFS= read -r file; do
+            filename=$(basename "$file" .md)
+            dirname=$(basename "$(dirname "$file")")
+            outputname="${dirname}_${filename}"
 
             echo "  • $file  →  ${outputname}.(html|pdf)"
 
             # HTML
-            marp "$file" --html --allow-local-files --output "public/${outputname}.html"
+            marp "$file" --html --allow-local-files --output "public/${outputname}.html" || { echo "❌ Failed to convert $file to HTML"; exit 1; }
             # PDF
-            marp "$file" --pdf  --allow-local-files --output "public/${outputname}.pdf"
+            marp "$file" --pdf  --allow-local-files --output "public/${outputname}.pdf"  || { echo "❌ Failed to convert $file to PDF"; exit 1; }
 
             # Ajout dans l'index
             cat >> public/index.html <<HTML
