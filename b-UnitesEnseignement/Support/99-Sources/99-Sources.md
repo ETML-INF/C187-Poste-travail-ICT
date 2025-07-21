@@ -12,7 +12,7 @@ footer: "ETML - Module 187 - Sources"
 
 ## Support de cours ETML
 
-JYM, AGX, PCX, RFA, BSI, LDG, CSF, AGR, ISI
+JYM, AGX, PCX, RFA, BSI, LDG, CSF, AGR
 
 ---
 
